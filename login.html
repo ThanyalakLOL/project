@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <script>
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
-            }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-        }
-      }
-    }
-    </script>
   <head>
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-functions.js"></script>
+    <title>Login Going Dutch</title>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-functions.js"></script>
 
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tutorial Requests</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- stylesheets -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="loginStyle.css">
+  
+    <link rel="stylesheet" href="loginStyle.css" />
   </head>
- <body>
+  <body>
+        <!--  <div class="wrapper">	 -->
+          <div class="logo"> 
+             Going Dutch
+           </div> 
+        <!-- </div> -->
+     
+        <div class="pic">
+          <img src="6573.jpg" alt="">
+        </div>
+    
+        <div class="welcome">
+          <h1>
+            Manage your debt &  money
+          </h1>
+          <p>
+            We will make your life easier
+          </p>
+        </div>
+
+    <button class="loginWithGmail">Login with Gmail</button>
+  
     <!-- auth modals -->
-    <div class="auth open">
+    <!-- <div class="auth open">
       <div class="modal active">
         <h2>Login</h2>
         <form class="login">
           <input type="text" name="email" placeholder="Email">
           <input type="password" name="password" placeholder="Password">
           <button>Login</button>
+
           <p class="error"></p>
         </form>
         <div>No account? <a class="switch">Register instead</a></div>
@@ -69,18 +62,16 @@
           <p class="error"></p>
         </form>
         <div>Got an account? <a class="switch">Login instead</a></div>
-      </div>
-      </div>
+      </div> -->
+    
+    <!-- </div> -->
 
-
-
-       <!-- open index when login done -->
-      <div w3-include-html="index.html"></div>
+    <!-- open index when login done -->
+    <!-- <div w3-include-html="index.html"></div>
         <script>
-            includeHTML();
+            // includeHTML();
         </script>
-        </div> 
-
+        </div>  -->
 
     <script>
       // Your web app's Firebase configuration
@@ -92,7 +83,7 @@
         storageBucket: "goingdutch2-2665e.appspot.com",
         messagingSenderId: "304127427663",
         appId: "1:304127427663:web:f1440e40b340929996163a",
-        measurementId: "G-S06KQ9ZDTN"
+        measurementId: "G-S06KQ9ZDTN",
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
@@ -100,9 +91,5 @@
     </script>
 
     <script src="auth.js"></script>
-      </body>
-    </html>
-    
-    
-    
- 
+  </body>
+</html>

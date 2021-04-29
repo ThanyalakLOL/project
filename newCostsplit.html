@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GOING DUTCH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
-
     <link rel="stylesheet" href="newCostsplit.css">
 </head>
 
@@ -40,6 +37,7 @@
                     </li>
                 </ul>
             </div>
+        </div>
         </div>
     </nav>
     <div class="container bg-danger my-5 p-5" id="costsplitArea">
@@ -86,12 +84,13 @@
                 <input type="text" id="typename" class="form-control fs-7 h-25" placeholder="name..." list="peoplename"
                     value="">
                 <!-- <button class="" onclick="AddData(document.getElementById('typename').value)" >add</button> -->
-                <button class="" onclick="addName()">add</button>
-
+                <button class="d-inline" onclick="addName()">add</button>
             </div>
-            <button class="bg-danger" onclick="ResetButton()">Reset</button>
+            <button class="bg-danger d-inline" onclick="ResetButton()">Reset</button>
         </div>
+        <div><button class="d-inline" onclick="addNewDebtor()">save</button></div>
     </div>
+
     <script src="script.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
@@ -105,32 +104,75 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
 
     <script>
-        //   data = [{email: a,cost:10}, {email: b , cost:4},  ]
+        var user = firebase.auth().currentUser;
+
+        if (user != null) {
+        user.providerData.forEach(function (profile) {
+        console.log("Sign-in provider: " + profile.providerId);
+        console.log("  Provider-specific UID: " + profile.uid);
+        console.log("  Name: " + profile.displayName);
+        console.log("  Email: " + profile.email);
+        console.log("  Photo URL: " + profile.photoURL);
+        });
+        }
+        
+        if(document.getElementById("typename").value != ""){
+            var data = [{email: 'a',cost:10}, {email: 'b' , cost:4}]            
+        }
 
         var firebaseConfig = {
-        apiKey: "AIzaSyDXyhsZrqCyW4PLcnhjSn6BL5vW51zfFPk",
-        authDomain: "goingdutch2-2665e.firebaseapp.com",
-        projectId: "goingdutch2-2665e",
-        storageBucket: "goingdutch2-2665e.appspot.com",
-        messagingSenderId: "304127427663",
-        appId: "1:304127427663:web:f1440e40b340929996163a",
-        measurementId: "G-S06KQ9ZDTN"
-      };
-      // Initialize Firebase
-       var app = firebase.initializeApp(firebaseConfig);
-        var db = firebase.firestore(app)
-        var docRef = db.collection("user").doc("payment");
+            apiKey: "AIzaSyDXyhsZrqCyW4PLcnhjSn6BL5vW51zfFPk",
+            authDomain: "goingdutch2-2665e.firebaseapp.com",
+            projectId: "goingdutch2-2665e",
+            storageBucket: "goingdutch2-2665e.appspot.com",
+            messagingSenderId: "304127427663",
+            appId: "1:304127427663:web:f1440e40b340929996163a",
+            measurementId: "G-S06KQ9ZDTN"
+        };
+        // Initialize Firebase
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore(app);
 
-        docRef.get().then((doc) => {
-            if (doc.exists) {
-                console.log("Document data:", doc.data());
-            } else {
-                // doc.data() will be undefined in this case
-                console.log("No such document!");
-            }
-        }).catch((error) => {
-            console.log("Error getting document:", error);
-        });
+        async function getMarkers() { // get data
+            const user = await firebase.firestore().collection('user')
+            const snapshot = await user.get()
+            console.log('snapshot>>>>', snapshot)
+            const tempDoc = snapshot.docs.map((doc) => {
+                const userData = {id: doc.id}
+                return {userData}
+            })
+
+            console.log(tempDoc)
+        }
+        getMarkers()
+
+        function addNewDebtor() {   // add data
+            db.collection("session").add({
+                order : "test", 
+                creditor: "a@mail.com",
+                debtor: data
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+
+
+        // var docRef = db.collection("user").doc("a@mail.com");
+
+        // docRef.get().then((doc) => {
+        //     if (doc.exists) {
+        //         console.log("Document data:", doc.data());
+        //     } else {
+        //         // doc.data() will be undefined in this case
+        //         console.log("No such document!");
+        //     }
+        // }).catch((error) => {
+        //     console.log("Error getting document:", error);
+        // });
 
 
     </script>
