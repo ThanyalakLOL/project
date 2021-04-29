@@ -21,7 +21,14 @@ const loginWithGmail = () => {
     window.location = 'newCostsplit.html'
    
   }).catch((error) => {
-    loginFormWithGmail.querySelector('.error').textContent = error.message;
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
   });
 }
 
@@ -64,7 +71,9 @@ const loginWithGmail = () => {
 // });
 
 // login form with gmail
-loginFormWithGmail.addEventListener('click', loginWithGmail);
+loginFormWithGmail.addEventListener('click', loginWithGmail());
+
+
 
 // auth listener
 // firebase.auth().onAuthStateChanged(user => {
@@ -79,5 +88,5 @@ loginFormWithGmail.addEventListener('click', loginWithGmail);
     // authWrapper.classList.add('open');
     // authModals[0].classList.add('active');
     // window.location = 'login.html'
-  // }
+//   }
 // });
