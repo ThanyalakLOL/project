@@ -5,7 +5,7 @@
 }
 body {
 	text-align: center;
-  background-color: white;
+  background-color: linear-gradient(120deg, #a6ffc6 0%, #afe3fd 100%);
   -webkit-background-size: cover;
   background-size: cover;
   width: 100vw;
