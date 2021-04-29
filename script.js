@@ -30,5 +30,4 @@ function ResetButton() {
     peoplesize.innerText = 0;
     var total_price = parseInt(document.getElementById("total_price").value);
     total_price.innerText = 0;
-
 }
