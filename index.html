@@ -9,7 +9,52 @@
 	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 </head>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-functions.js"></script>
+<script>
+	console.log('run')
+	// const signOut = document.querySelector('.sign-out');
+	// console.log(signOut)
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	var firebaseConfig = {
+	  apiKey: "AIzaSyDXyhsZrqCyW4PLcnhjSn6BL5vW51zfFPk",
+	  authDomain: "goingdutch2-2665e.firebaseapp.com",
+	  projectId: "goingdutch2-2665e",
+	  storageBucket: "goingdutch2-2665e.appspot.com",
+	  messagingSenderId: "304127427663",
+	  appId: "1:304127427663:web:f1440e40b340929996163a",
+	  measurementId: "G-S06KQ9ZDTN"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+
+	firebase.auth().onAuthStateChanged(user => {
+    console.log('run')
+    if (user) {
+      console.log(user)
+	  console.log('login')
+      // authWrapper.classList.remove('open');
+      // authModals.forEach(modal => modal.classList.remove('active'));
+    } else {
+      console.log('is not log in')
+    //   authWrapper.classList.add('open');
+    //   authModals[0].classList.add('active');
+      window.location = 'login.html'
+    }
+  });
+
+  signOut.addEventListener('click', () => {
+//   firebase.auth().signOut()
+//     .then(() => console.log('signed out'));
+});
+
+  
+  </script>
 <body>
+	
 	<div class="box-area">
 		<header>
 			<div class="wrapper">	
@@ -17,7 +62,7 @@
 					<a href="#">Going Dutch</a>
 				</div>
 				<nav>
-					<a href="#">Home</a> <a href="#">contacts</a> <a href="#">User</a> <a class = "sign-out" href="login.html"><button>Log out</button></a>
+					<a href="#">Home</a> <a href="#">contacts</a> <a href="#">User</a> <a class = "sign-out"><button>Log out</button></a>
 				</nav>
 			</div>
 		</header>
@@ -73,6 +118,13 @@
 	</div>
     <div class="circle4"></div>
     <div class="circle6"></div>
-	<script src="auth.js"></script>
+	<script>
+		const signOut = document.querySelector('.sign-out');
+	console.log(signOut)
+	signOut.addEventListener('click', () => {
+  firebase.auth().signOut()
+	})
+	</script>
+	<!-- <script src="test.js"></script> -->
 </body>
 </html>
