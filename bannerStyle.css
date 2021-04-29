@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    /*  091 Eternal Constance  */
+    background-image: white
+}
+
+:root{
+  --primary-gradient: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+img{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 100px;
+  top: 150px;
+
+}
+.wrapper{
+  height: 90vh;
+  width: 80vw;
+  max-width: 1100px;
+  margin: 2rem auto;
+  /* 069 Purple Division */
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.4);
+  border-radius: .2rem;
+  position: relative;
+}
+
+
+/* .mobile-view{
+    position: absolute;
+    top: 0%;
+    display: none;
+  }
+  .mobile-view img{
+    width: 100%;
+  }
+   .tablet-view{
+     position: absolute;
+     top: 0%;
+     display: none;
+  }
+  .tablet-view img{
+    width: 100%;
+  }
+   */
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  /* Buttons */
+  .container .title{
+    width: 90%;
+    height: 20%;
+    text-align: center;  
+    padding: 2rem 2rem;
+    margin: 9rem 0;
+    z-index: 9999;
+  }
+  .container h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 3em;
+    color: rgb(248, 184, 45);
+  }
+  
+  .container p{
+    font-family: 'Muli', sans-serif;
+    color: black;
+  }
+  
+  button {
+    font-family: 'Muli', sans-serif;
+    color: black;
+    font-size: 1rem;
+    padding: .8rem 2.3rem;
+    margin: 0 .1rem;
+    border: 0;
+    border-radius: 3rem;
+    background: var(--primary-gradient);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover{
+    opacity: 0.7;
+  }
+
+  
+  /* Responsive */
+  @media only screen and (max-width: 1013px){
+    .graphic{
+      display: none;
+    }
+    .container{
+      grid-template-columns: 100%;
+    }
+    .tablet-view{
+      display: block;
+    }
+    .container .title{
+      padding: 0 .9rem;
+    }
+    .container .title h1{
+      font-size: 2rem;
+    }
+    .container .title{
+      margin: 3rem 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 678px){
+    .tablet-view{
+      display: none;
+    }
+    .mobile-view{
+      display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 402px){
+    .mobile-view{
+      display: none;
+    }
+    .container .title{
+      margin:0;
+    }
+  }

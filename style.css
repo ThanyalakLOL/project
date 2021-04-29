@@ -1,0 +1,274 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+  background-color: white;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+	width: 1400px;
+	margin: auto;
+}
+header {
+	height: 60px;
+	background: white;
+	width: 100%;
+	z-index: 1;
+	position: fixed;
+}
+.logo {
+	width: 30%;
+	float: left;
+	line-height: 60px;
+}
+.logo a {
+	text-decoration: none;
+	font-size: 30px;
+	font-family: poppins;
+	color: black;
+	letter-spacing: 5px;
+}
+nav {
+	float: right;
+	line-height: 60px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 17px;
+	margin: 0 10px;
+	color: rgb(247, 186, 94);
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.banner-area h1{
+    z-index: 10;
+    height: 100px;
+    width: 40%;
+    color: rgb(21, 32, 94);
+    font-size: 70px;
+    font-family: poppins;
+    bottom: 580px;
+    left: 100px;
+    position: relative;
+    text-align: left;
+    justify-self: start;
+}
+
+.banner-area p{
+  color: rgb(243, 64, 124);
+  font-family: poppins;
+  font-size: 20px;
+  position:relative;
+  bottom: 480px;
+  left: 100px;
+  text-align: left;
+  justify-self: start;
+  z-index: 10;
+
+}
+
+.img1 img{
+  width: 60px;
+  height: 60px;
+  grid-area: cost;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.img2 img{
+  width: 60px;
+  height: 60px;
+  grid-area: debt;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.img3 img{
+  width: 50px;
+  height: 50px;
+  grid-area: credit;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.bannerPic{
+  grid-area: bannerpic;
+}
+
+.pic img{
+  width: 700px;
+  height: 500px;
+  position: relative;
+  left: 350px;
+  top: 310px;
+  z-index: 0;
+}
+
+.bannerPic img{
+  width: 400px;
+  height: 400px;
+}
+
+.wrapper button {
+    font-family: poppins;
+    color: black;
+    font-size: 2rem;
+    padding: .8rem 2.3rem;
+    margin: 0 .1rem;
+    border: 0;
+    border-radius: 3rem;
+    background: #d1fdff;
+    cursor: pointer;
+}
+
+a button:hover{
+    text-decoration: underline;
+}
+
+  .circle4{
+    z-index: 0;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    border-radius: 5px;
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 0%;
+    right: 50%;
+    z-index: -2;
+  }
+
+  .circle6{
+    z-index: 0;
+    background-image: linear-gradient(120deg, #a6ffc6 0%, #afe3fd 100%);
+    height: 22rem;
+    width: 22rem;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 7%;
+    left: -3%;
+    z-index: -2;
+  }
+  
+  .wrapper button{
+      font-size: 17px;
+      padding: .3rem 1.5rem;
+      -webkit-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+  
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a button:hover{
+    text-decoration: underline;
+}
+
+.banner-area button{
+  /* display: flex;
+  flex-wrap: nowrap;
+  align-self: center;
+  justify-self: center; */
+  /* min-width: 40vh;
+  max-height: 14vh; */
+  display:flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  z-index: 5;
+  font-family: poppins;
+  color: black;
+  border: white;
+    font-size: 2rem;
+    padding: .8rem 2.3rem;
+    margin: 0 .1rem;
+    border: 0;
+    border-radius: 3rem;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-box-shadow: 0 30px 50px rgba(0,0,0,.2);
+  box-shadow: 0 30px 50px rgba(0,0,0,.2);
+}
+
+.cost_plit button{
+  position: relative;
+  bottom: 400px;
+  left: 600px;
+  z-index: 3;
+} 
+
+.cost_plit img{
+  float: left; 
+}
+
+.menu1 {
+  float: right;
+} 
+
+.debtor button{
+  position: relative;
+  bottom: 100px;
+  left: 370px;
+  z-index: 3;
+}
+
+.debtor img{
+  float: left; 
+}
+
+.menu2{
+  float: right;
+  margin: 20px;
+}
+
+.creditor button{
+  position: relative;
+  bottom: 440px;
+  left: 690px;
+}
+
+.creditor img{
+  float: left; 
+}
+
+.menu3{
+  float: right;
+  margin-right: 15px;
+  margin-left: 10px;
+
+}
+html, body {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.banner-area button:hover{
+  background-image: linear-gradient(60deg, #abecec 0%, #fffef9 100%);}

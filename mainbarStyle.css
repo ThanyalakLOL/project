@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	text-align: center;
+}
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+header {
+	height: 0px;
+	background: white;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+.logo {
+	width: 30%;
+	float: left;
+	line-height: 100px;
+}
+.logo a {
+	text-decoration: none;
+	font-size: 30px;
+	font-family: poppins;
+	color: black;
+	letter-spacing: 5px;
+}
+nav {
+	float: right;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: rgb(247, 186, 94);
+}
+.banner-area {
+	width: 100%;
+	height: 670px;
+	position: fixed;
+	top: 100px;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+	/* -webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center; */
+	display: flex;
+	align-items: center;  /*จัด Flex Item ให้อยู่ตรงกลางใน Flex Container*/
+	justify-content: center; /*จัด Flex Item ให้อยู่ตรงกลาง*/
+}
+.banner-area h2 {
+	padding-top: 8%;
+	font-size: 70px;
+	font-family: poppins;
+	/* text-transform: uppercase; */
+	color: #fff;
+}
+img{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: auto;
+	right: auto;
+}
+.right{
+	width: 50px;
+	height: 670;
+	float: right;
+	background-color: aquamarine;
+	z-index: 20;
+}
