@@ -3,7 +3,7 @@
 // const authWrapper = document.querySelector('.auth');
 // const registerForm = document.querySelector('.register');
 // const loginForm = document.querySelector('.login');
-const loginFormWithGmail = document.querySelector('.loginWithGmail');
+const loginFormWithGmail = document.querySelector('#loginGmail');
 
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -71,7 +71,7 @@ const loginWithGmail = () => {
 // });
 
 // login form with gmail
-loginFormWithGmail.addEventListener('click', loginWithGmail());
+loginFormWithGmail.addEventListener('click', loginWithGmail);
 
 
 
