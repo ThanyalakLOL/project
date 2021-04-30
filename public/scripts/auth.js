@@ -18,8 +18,7 @@ const loginWithGmail = () => {
   firebase.auth()
   .signInWithPopup(provider)
   .then((result) => { 
-    window.location = 'newCostsplit.html'
-   
+    window.location = '../pages/newCostsplit.html'   
   }).catch((error) => {
     // Handle Errors here.
     var errorCode = error.code;
@@ -76,17 +75,10 @@ loginFormWithGmail.addEventListener('click', loginWithGmail);
 
 
 // auth listener
-// firebase.auth().onAuthStateChanged(user => {
-//   console.log('run')
-//   if (user) {
-//     console.log(user)
-//     window.location = 'newCostsplit.html'
-    // authWrapper.classList.remove('open');
-    // authModals.forEach(modal => modal.classList.remove('active'));
-  // } else {
-  //   console.log('is not log in')
-    // authWrapper.classList.add('open');
-    // authModals[0].classList.add('active');
-    // window.location = 'login.html'
-//   }
-// });
+firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    window.location = '../pages/newCostsplit.html'
+  } else {
+    console.log('is not log in')
+  }
+});

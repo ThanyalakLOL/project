@@ -26,6 +26,25 @@ img{
   border-radius: .2rem;
   position: relative;
 }
+
+
+/* .mobile-view{
+    position: absolute;
+    top: 0%;
+    display: none;
+  }
+  .mobile-view img{
+    width: 100%;
+  }
+   .tablet-view{
+     position: absolute;
+     top: 0%;
+     display: none;
+  }
+  .tablet-view img{
+    width: 100%;
+  }
+   */
   .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -53,7 +72,7 @@ img{
     color: black;
   }
   
-  #loginGmail {
+  button {
     font-family: 'Muli', sans-serif;
     color: black;
     font-size: 1rem;
@@ -64,7 +83,6 @@ img{
     background: var(--primary-gradient);
     cursor: pointer;
   }
-
 
   a {
     text-decoration: none;
