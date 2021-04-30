@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(user => {
   if (user) {
     
     window.location = 'newCostsplit.html'
-    
+  
 
   } else {
     console.log('is not log in');
