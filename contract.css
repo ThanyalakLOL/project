@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.wrapper button{
+  font-size: 17px;
+  padding: .3rem 1.5rem;
+  -webkit-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 34px rgba( 0, 0, 0, 0.12);
+
+}
+
+/* 
+พื้นหลัง */
+.banner-area {
+  min-height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  /* margin: 0 auto; */
+  /* -webkit-background-size: cover;
+	background-size: cover;
+	background-position:  center; */
+  display: flex;
+}
+
+  header {
+    height: 60px;
+    background: white;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+  }
+  .logo {
+    width: 30%;
+    float: left;
+    line-height: 60px;
+    text-align : center;
+
+  }
+  /* going dutch */
+.logo a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: poppins;
+  color: black;
+  letter-spacing: 5px;
+}
+nav {
+  float: right;
+  line-height: 60px;
+}
+nav a {
+  text-decoration: none;
+  font-family: poppins;
+  letter-spacing: 4px;
+  font-size: 17px;
+  margin: 0 10px;
+  color: rgb(247, 186, 94);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.banner-area button:hover {
+  background-image: linear-gradient(60deg, #abecec 0%, #fffef9 100%);
+}
+/* .wrapper button ,{
+  font-size: 17px;
+  padding: .3rem 1.5rem;
+  -webkit-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+
+} */
+
+
+/* .banner-area {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+} */
+/* ปุ่ม */
+button  {
+  font-family: poppins;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  padding: .8rem 2.3rem;
+  margin: 0 .1rem;
+  border: 0;
+  border-radius: 3rem;
+  background: #d1fdff;
+  cursor: pointer;
+}
+.box-information{
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  
+      
+  }
+  p,h1 {
+    text-align : center;
+      
+  }
