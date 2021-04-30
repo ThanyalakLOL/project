@@ -1,0 +1,96 @@
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    height: 100vh;
+    /*  091 Eternal Constance  */
+    background-image:linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+.title h1 {
+    font-size: 3em;
+    color: rgb(248, 184, 45);
+}
+.title p {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+#loginGmail {
+    font-family: 'Muli', sans-serif;
+    color: black;
+    font-size: 1rem;
+    padding: .8rem 2.3rem;
+    margin: 0 .1rem;
+    border: 0;
+    border-radius: 3rem;
+    background: white;
+    cursor: pointer;
+}
+/* :root{
+    --primary-gradient: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  } */
+  /* img{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 100px;
+    top: 150px;
+  
+  } */
+  /* .wrapper{
+    height: 90vh;
+    width: 80vw;
+    max-width: 1100px;
+    margin: 2rem auto;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.4);
+    border-radius: .2rem;
+    position: relative;
+  } */
+  
+  
+  /* .mobile-view{
+      position: absolute;
+      top: 0%;
+      display: none;
+    }
+    .mobile-view img{
+      width: 100%;
+    }
+     .tablet-view{
+       position: absolute;
+       top: 0%;
+       display: none;
+    }
+    .tablet-view img{
+      width: 100%;
+    }
+     */
+
+.title {
+   margin-top: 30%;
+  }
+
+
+@media only screen and (max-width: 1013px) {
+  .logo {
+    width: 400px;
+    height: 400px;
+  }
+  /* .title {
+    position: fixed;
+    top: 40%;
+  } */
+}
+
+@media (max-width: 575.98px) {
+  .logo {
+    width: 300px;
+    height: 300px;
+  }
+  .title {
+    position: static;
+    margin: auto;
+  }
+}
+
+#container {
+  text-align: center;
+}
