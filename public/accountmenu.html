@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GOING DUTCH</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+       
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styled/accountStyle.css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <a  class="navbar-brand">GOING DUTCH</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbar1" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="newCostsplit.html" class="nav-link">DIVIDE EVENLY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="costplitCustom.html" class="nav-link">DIVIDE CUSTOM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="accountmenu.html" class="nav-link">USER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">CONTACTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">LOG OUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+            <div class="container bg-dark">
+
+                <form action="index.html" class="login"> 
+                <div class="box-information">
+                    <h1><stong>Information</stong></h1>
+
+                    <div class="information-field">
+                            <br>
+                            <!-- <lable for="username">Username : </lable> -->
+                            <!-- <input type="text" name="username"> -->
+                            <br>
+                            <lable id="user_email" for="email">Email : </lable>
+                            <br>
+
+                            <lable for="bankNum">Bank account / PromptPay : </lable> 
+                            <input type="text" name="banknum" placeholder="Enter account number">
+                            <br>
+                            <small>Ex: SCB-1234567890 Phapirunya 
+
+                                <br>
+                            <div class="container-fluid">
+                                <div class="qrcode">
+                                <img src="addphoto.png" width=70 alt="QR-Code">
+                                <br>
+                                <br>
+                               <button class="btn1">save</button>
+
+                                </div>   
+
+                            </div>
+                    </div>
+                </div>
+                </form>
+        </div>
+        <script src="auth.js"></script>
+    </body>
+</html>
